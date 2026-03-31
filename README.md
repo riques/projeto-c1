@@ -1,4 +1,5 @@
-# Classificador de Imagens - Gatos vs Cachorros
+# Projeto C1 - Classificador de Imagens - Gatos vs Cachorros
+Aluno: Henrique De Nadai Salvador
 Projeto da disciplina de Robótica e Sistemas Inteligentes (Unidade 1).
 
 ## Tecnologias Utilizadas
