@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Classificador de Gatos e Cachorros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Classificador de Imagens IA</h1>
+
+    <div class="card">
+      <h2>1. Teste Individual</h2>
+      <p>Faça upload de uma imagem ou use a webcam.</p>
+      
+      <input type="file" id="upload" accept="image/*">
+      
+      <button id="btnWebcam" onclick="ligarWebcam()">Ligar Webcam</button>
+      <button id="btnCapturar" onclick="capturarEClassificar()" disabled>Capturar e Classificar</button>
+      
+      <br><br>
+      <video id="webcam" width="224" height="224" autoplay playsinline style="display:none; margin: 0 auto;"></video>
+      <canvas id="canvasWebcam" width="224" height="224" style="display:none;"></canvas>
+      
+      <img id="imagem" style="display:none;">
+      <div id="resultado" class="highlight">Aguardando imagem...</div>
+    </div>
+
+    <hr>
+
+    <div class="card">
+      <h2>2. Avaliação em Lote (Dataset de Teste)</h2>
+      <p>Selecione as imagens nas suas respectivas categorias para gerar as métricas.</p>
+      
+      <div style="text-align: left; margin-bottom: 15px;">
+        <label><strong>1. Imagens de Gatos (Cats):</strong></label>
+        <input type="file" id="testImagesCat" multiple accept="image/*">
+        <br><br>
+        <label><strong>2. Imagens de Cachorros (Dogs):</strong></label>
+        <input type="file" id="testImagesDog" multiple accept="image/*">
+      </div>
+
+      <button onclick="avaliarModelo()">Avaliar Modelo</button>
+
+      <pre id="metricas"></pre>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
