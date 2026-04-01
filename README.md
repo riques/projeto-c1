@@ -3,6 +3,7 @@ Aluno: Henrique De Nadai Salvador
 Projeto da disciplina de Robótica e Sistemas Inteligentes (Unidade 1).
 
 ## Tecnologias Utilizadas
+* Imagens do Kaggle: https://www.kaggle.com/datasets/anthonytherrien/dog-vs-cat
 * HTML5, CSS3, JavaScript
 * TensorFlow.js
 * Teachable Machine (Google)
